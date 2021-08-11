@@ -19,9 +19,9 @@ const Home = () => {
             <Container>
                 <Grid
                     container
-                    justify="space-between"
+                    justifyContent="space-between"
                     alignItems="stretch"
-                    spacing="3"
+                    spacing={3}
                     className={classes.maincontainer}
                 >
                     <Grid item xs={12} md={7}>

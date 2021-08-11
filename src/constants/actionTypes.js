@@ -4,3 +4,8 @@ export const PostActionTypes = {
   UPDATE: "UPDATE",
   DELETE: "DELETE",
 };
+
+export const AuthActionTypes = {
+  AUTH: "AUTH",
+  LOGOUT: "LOGOUT",
+};
