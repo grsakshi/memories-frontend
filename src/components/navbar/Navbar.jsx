@@ -25,11 +25,14 @@ const Navbar = () => {
         if(token){
             const decodedToken = decode(token);
 
-            if (decodedToken.exp * 1000 < new Date().getTime())
-                logout();
+            if (decodedToken.exp * 1000 < new Date().getTime()){
+                dispatch({ type: "LOGOUT" });
+                history.push('/');
+                setUser(null);
+            }      
         }
         setUser(JSON.parse(localStorage.getItem('profile')))
-    }, [location, user?.token]);
+    }, [location, user?.token, dispatch, history]);
 
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
