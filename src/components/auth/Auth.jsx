@@ -50,6 +50,7 @@ const Auth = () => {
         console.log("Google Sign In unsuccessful. Try again later.");
     }
     const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword);
+    
     return (
         <Container component="main" maxWidth="xs">
             <Paper className={classes.paper} elevation={3}>
@@ -95,7 +96,7 @@ const Auth = () => {
                             handleShowPassword={handleShowPassword}
                         />
                         {
-                            isSignUp && <Input name="confirmPassword" label="Repeat Password" handleChange={handleChange}/>
+                            isSignUp && <Input name="confirmPassword" type="password" label="Repeat Password" handleChange={handleChange}/>
                         }
                     </Grid>
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit} onClick={handleSubmit}>
